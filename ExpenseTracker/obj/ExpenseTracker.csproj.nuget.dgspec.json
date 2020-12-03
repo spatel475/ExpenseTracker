@@ -1,30 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Github\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj": {}
+    "C:\\Github\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj": {}
   },
   "projects": {
-    "C:\\Github\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj": {
+    "C:\\Github\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Github\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
+        "projectUniqueName": "C:\\Github\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
         "projectName": "ExpenseTracker",
-        "projectPath": "C:\\Github\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
-        "packagesPath": "C:\\Users\\Ryzen PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Github\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\obj\\",
+        "projectPath": "C:\\Github\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
+        "packagesPath": "C:\\Users\\spatel\\.nuget\\packages\\",
+        "outputPath": "C:\\Github\\ExpenseTracker\\ExpenseTracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ryzen PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\spatel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.ft-ps.com/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,10 +45,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.AspNet.SignalR.Core": {
-              "target": "Package",
-              "version": "[2.4.1, )"
-            },
             "Microsoft.AspNetCore.SignalR.Client": {
               "target": "Package",
               "version": "[5.0.0, )"
