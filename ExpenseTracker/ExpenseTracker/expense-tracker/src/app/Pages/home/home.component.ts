@@ -8,9 +8,9 @@ import { SpeechService } from 'src/app/Services/speech.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  categories: string[] = [];
-
+  sidebarCategories: string[] = ['Home', 'Reports', 'Settings'];
   isDarkTheme: boolean = false;
+  sideNavOpen = false;
 
   constructor(
     private appLogic: AppLogicMain,
@@ -21,17 +21,17 @@ export class HomeComponent implements OnInit {
     this.isDarkTheme = localStorage.getItem('theme') === 'Dark' ? true : false;
   }
 
-
-  addCategory(input: string) {
-    this.appLogic.applogicMainTest();
-
-    this.categories.push(input);
-  }
-
   toggleTheme() {
     this.isDarkTheme = !this.isDarkTheme;
     localStorage.setItem('theme', this.isDarkTheme ? "Dark" : "Light");
-    console.log(this.isDarkTheme);
   }
 
+  getTheme() {
+    let theme = localStorage.getItem('theme');
+    return theme == 'Dark' ? false : true;
+  }
+
+  routeToComponent(data) {
+    console.log(data); // this will eventually route to different components 
+  }
 }

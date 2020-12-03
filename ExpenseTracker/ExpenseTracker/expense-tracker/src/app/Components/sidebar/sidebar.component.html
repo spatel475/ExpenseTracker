@@ -1,22 +1,25 @@
-<div class="example-container" 
-  [class.example-is-mobile]="mobileQuery.matches"
-  >
-  <mat-toolbar color="accent" class="example-toolbar">
-    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-    <h1 class="example-app-name">Expense Tracker</h1>
+<div class="container">
+  <mat-toolbar color="primary" class="toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="app-name">Expense Tracker</span>
+    <span class="spacer"></span>
+    <button mat-raised-button color="accent" (click)="categoryClicked('login')">Logout</button>
   </mat-toolbar>
-
-  <mat-sidenav-container class="example-sidenav-container"
-    [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-helllo
-
-    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #snav>
       <mat-nav-list>
-        <a mat-list-item routerLink="." *ngFor="let nav of navbarItems">{{nav}}</a>
+        <mat-list-item *ngFor="let category of categories">
+          <div (click)="categoryClicked(category)">
+            <mat-icon class="nav-icon">{{category.toLowerCase()}}</mat-icon>
+            <span>{{category}}</span>
+          </div>
+        </mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
-
+    <mat-sidenav-content>
+      <ng-content></ng-content>
+    </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
-
